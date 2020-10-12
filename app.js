@@ -26,6 +26,7 @@ mongoose
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
+app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
 //My Routes
 app.use("/api", authRoutes);
